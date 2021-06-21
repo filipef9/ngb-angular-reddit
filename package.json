@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "npx ng",
-    "start": "npx ng serve",
+    "start": "npx ng serve --disable-host-check --host 0.0.0.0",
     "build": "npx ng build",
     "test": "npx ng test",
     "lint": "npx ng lint",
