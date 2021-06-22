@@ -18,8 +18,6 @@ export class AppComponent {
   }
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
-    console.log(`Adding article title: ${title.value} and link: ${link.value}`);
-
     this.articles = [
       ...this.articles,
       new Article(title.value, link.value, 0)
@@ -29,6 +27,10 @@ export class AppComponent {
     link.value = '';
 
     return false;
+  }
+
+  sortedArticles(): Article[] {
+    return this.articles.sort((a1: Article, a2: Article) => a2.votes - a1.votes);
   }
 
 }
